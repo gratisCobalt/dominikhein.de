@@ -11,6 +11,7 @@ interface Project {
   tags: string[]
   link?: string
   award?: string
+  isPhone?: boolean
 }
 
 const projects: Project[] = [
@@ -21,7 +22,8 @@ const projects: Project[] = [
     description:
       'Eine moderne Gym-App mit intelligentem Workout-Tracking, personalisierten Trainingsplänen und Fortschrittsanalyse.',
     image: sculptScreenshot,
-    tags: ['React Native', 'TypeScript', 'Firebase'],
+    tags: ['React', 'TypeScript', 'Vercel', 'Serverless'],
+    isPhone: true,
   },
   {
     id: 'revolutionair',
@@ -30,8 +32,8 @@ const projects: Project[] = [
     description:
       'Innovatives Projekt zur Luftqualitätsüberwachung mit KI-gestützter Analyse. Bundessieger bei Jugend forscht.',
     image: '', // Placeholder for later
-    tags: ['Python', 'Machine Learning', 'IoT'],
-    award: 'Bundessieg 2024',
+    tags: ['Python', 'Flutter', 'C++', 'MQTT', 'Machine Learning', 'IoT'],
+    award: 'Bundessieg 2022',
   },
 ]
 
@@ -99,17 +101,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         )}
 
         {/* Image container */}
-        <div className="relative mb-6 aspect-video overflow-hidden rounded-xl bg-bg-tertiary">
+        <div className={`relative mb-6 overflow-hidden rounded-xl bg-bg-tertiary ${project.isPhone ? 'flex justify-center py-8' : 'aspect-video'}`}>
           {project.image ? (
             <motion.img
               src={project.image}
               alt={project.title}
-              className="h-full w-full object-cover"
+              className={project.isPhone 
+                ? "h-64 w-auto object-contain drop-shadow-2xl" 
+                : "h-full w-full object-cover"}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
           ) : (
-            <div className="flex h-full items-center justify-center text-text-muted">
+            <div className="flex h-full min-h-48 items-center justify-center text-text-muted">
               <span className="text-4xl">🖼️</span>
               <span className="ml-2">Bild folgt</span>
             </div>
