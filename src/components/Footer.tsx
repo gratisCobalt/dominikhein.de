@@ -56,7 +56,6 @@ export function Footer() {
           >
             <a href="#" className="mb-4 inline-block text-2xl font-bold">
               <span className="text-gradient">Dominik</span>
-              <span className="text-text-secondary">.dev</span>
             </a>
             <p className="mb-6 max-w-sm text-text-secondary">
               Full-Stack Developer mit Leidenschaft für innovative Lösungen. 

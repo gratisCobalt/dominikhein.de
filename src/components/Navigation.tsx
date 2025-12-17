@@ -36,7 +36,6 @@ export function Navigation() {
           whileTap={{ scale: 0.95 }}
         >
           <span className="text-gradient">Dominik</span>
-          <span className="text-text-secondary">.dev</span>
         </motion.a>
 
         <nav className="hidden items-center gap-8 md:flex">
