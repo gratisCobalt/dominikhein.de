@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/* ===== DESIGN SYSTEM: Apple Liquid Glass + Aquamarine ===== */
+
+@theme {
+  /* Primary Colors - Aquamarine Accent */
+  --color-accent: #7fffd4;
+  --color-accent-glow: #a8ffe8;
+  --color-accent-dark: #4dd4a8;
+  
+  /* Background Colors - Deep Dark */
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-bg-tertiary: #1a1a25;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  
+  /* Glass Effects */
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(127, 255, 212, 0.15);
+  --color-glass-border-hover: rgba(127, 255, 212, 0.3);
+  
+  /* Shadows & Glows */
+  --shadow-glow-sm: 0 0 20px rgba(127, 255, 212, 0.2);
+  --shadow-glow-md: 0 0 40px rgba(127, 255, 212, 0.3);
+  --shadow-glow-lg: 0 0 80px rgba(127, 255, 212, 0.4);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.5);
+  
+  /* Gradients */
+  --gradient-accent: linear-gradient(135deg, #7fffd4 0%, #4dd4a8 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+  --gradient-hero: radial-gradient(ellipse at 50% 0%, rgba(127, 255, 212, 0.15) 0%, transparent 60%);
+  --gradient-mesh: radial-gradient(at 40% 20%, rgba(127, 255, 212, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, rgba(127, 255, 212, 0.08) 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, rgba(127, 255, 212, 0.05) 0px, transparent 50%);
+  
+  /* Typography */
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Spacing */
+  --space-section: 8rem;
+  --space-container: 1.5rem;
+  
+  /* Animations */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-full: 9999px;
+}
+
+/* ===== BASE STYLES ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== GLASS COMPONENTS ===== */
+
+.glass {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-card);
+}
+
+.glass-hover {
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-glass-border-hover);
+  box-shadow: var(--shadow-glow-sm), var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+/* ===== GLOW EFFECTS ===== */
+
+.glow-accent {
+  box-shadow: var(--shadow-glow-md);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(127, 255, 212, 0.5);
+}
+
+/* ===== ANIMATED GRADIENT BACKGROUND ===== */
+
+.bg-mesh {
+  background: var(--gradient-mesh);
+}
+
+.bg-hero-gradient {
+  background: var(--gradient-hero);
+}
+
+/* ===== BUTTON VARIANTS ===== */
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: var(--color-bg-primary);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-glow-md);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-glass-border);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.btn-ghost:hover {
+  background: var(--color-glass-bg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ===== TYPOGRAPHY UTILITIES ===== */
+
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ===== SECTION UTILITIES ===== */
+
+.section {
+  padding: var(--space-section) var(--space-container);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-container);
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-glass-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ===== SELECTION STYLING ===== */
+
+::selection {
+  background: rgba(127, 255, 212, 0.3);
+  color: var(--color-text-primary);
+}
+
+/* ===== LINK STYLES ===== */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+a:hover {
+  color: var(--color-accent-glow);
+}
+
+/* ===== FOCUS STYLES ===== */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ===== ANIMATED UNDERLINE ===== */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-accent);
+  transition: width var(--duration-normal) var(--ease-smooth);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ===== FLOATING ANIMATION ===== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: var(--shadow-glow-sm); }
+  50% { box-shadow: var(--shadow-glow-lg); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ===== 3D CARD TILT SETUP ===== */
+
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d-inner {
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
