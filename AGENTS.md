@@ -37,6 +37,41 @@ This is a **static portfolio site** - no backend, no API routes, no database. Al
 
 Always reply in the same language as the user's message.
 
+## Git Commit Strategy
+
+When committing changes, follow these rules:
+
+### Commit Principles
+- **Small, focused commits**: Each commit should represent ONE logical change
+- **Never bundle unrelated changes**: Split into multiple commits
+- **Commit often**: After completing each feature/fix, commit immediately
+
+### Commit Message Format
+Use conventional commits format:
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `refactor:` - Code refactoring
+- `style:` - Styling changes
+- `docs:` - Documentation updates
+- `chore:` - Maintenance tasks (dependencies, config)
+
+### Commit Grouping Examples
+```
+# Good: Separate commits for separate concerns
+git commit -m "feat: add hero section with GSAP animations"
+git commit -m "feat: add project cards with 3D tilt effect"
+git commit -m "fix: update email address in footer"
+
+# Bad: One giant commit
+git commit -m "add everything"
+```
+
+### Workflow
+1. Check `git status` to see all changes
+2. Group related files logically
+3. Commit each group with a descriptive message
+4. Use `git log --oneline -10` to verify
+
 ## General Guidelines
 
 PERFECT ARCHITECTURE: Always consider whether the code needs refactoring given the latest request. If it does, refactor the code to be more efficient and maintainable. Spaghetti code is your enemy.
