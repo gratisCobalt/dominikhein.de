@@ -16,21 +16,21 @@ const shops: Shop[] = [
     name: 'Shop Projekt 1',
     description: 'Moderner E-Commerce Shop mit schnellem Checkout und responsivem Design.',
     image: '',
-    tech: ['Shopify', 'React', 'Tailwind'],
+    tech: ['Shopify', 'Liquid', 'React', 'Tailwind'],
   },
   {
     id: 'shop2',
     name: 'Shop Projekt 2',
     description: 'Custom-built Online-Shop mit integrierten Analytics und Inventory Management.',
     image: '',
-    tech: ['WooCommerce', 'PHP', 'JavaScript'],
+    tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
   {
     id: 'shop3',
     name: 'Shop Projekt 3',
     description: 'High-Performance Webshop mit optimierter User Experience und SEO.',
     image: '',
-    tech: ['Next.js', 'Stripe', 'Prisma'],
+    tech: ['Shopify', 'Liquid', 'Tailwind'],
   },
 ]
 
