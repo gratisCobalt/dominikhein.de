@@ -39,12 +39,12 @@ export function Hero() {
   }
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 pb-32">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
       {/* Hero background gradient */}
       <div className="bg-hero-gradient absolute inset-0" />
       
-      {/* Smooth fade to next section */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-primary" />
+      {/* Placeholder for background image - will be replaced */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-primary/50 to-bg-primary" />
 
       <div className="container relative z-10 text-center">
         {/* Animated badge */}
