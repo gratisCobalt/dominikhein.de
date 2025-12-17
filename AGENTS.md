@@ -68,9 +68,17 @@ git commit -m "add everything"
 
 ### Workflow
 1. Check `git status` to see all changes
-2. Group related files logically
-3. Commit each group with a descriptive message
-4. Use `git log --oneline -10` to verify
+2. **Run `npm run build` or check for TypeScript/lint errors BEFORE committing**
+3. Fix any errors found
+4. Group related files logically
+5. Commit each group with a descriptive message
+6. Use `git log --oneline -10` to verify
+
+### Pre-Commit Checklist
+- [ ] No TypeScript errors (`npx tsc --noEmit`)
+- [ ] No unused imports or variables
+- [ ] No lint errors
+- [ ] Build succeeds (`npm run build`)
 
 ## General Guidelines
 
