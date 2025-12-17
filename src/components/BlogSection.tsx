@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 interface BlogPost {
   id: string
@@ -12,28 +13,28 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'Wie KI die Luftqualität revolutionieren kann',
+    title: 'Mein Weg zum Bundessieg bei Jugend forscht',
     excerpt:
-      'Ein Einblick in mein Jugend forscht Projekt und die Technologie dahinter.',
-    date: '2024-03-15',
-    readTime: '5 min',
+      'Wie ich mit revolutionAIR und KI-gestützter Luftqualitätsanalyse den Bundeswettbewerb gewonnen habe.',
+    date: '2025-11-20',
+    readTime: '7 min',
     category: 'Forschung',
   },
   {
     id: '2',
-    title: 'React Native vs. Flutter: Meine Erfahrungen',
+    title: 'Serverless mit Vercel: So baue ich moderne Web-Apps',
     excerpt:
-      'Nach der Entwicklung von Sculpt teile ich meine Gedanken zu Cross-Platform-Entwicklung.',
-    date: '2024-02-28',
+      'Meine Erfahrungen mit Serverless Functions und warum ich Vercel für Sculpt gewählt habe.',
+    date: '2025-10-15',
     readTime: '8 min',
     category: 'Development',
   },
   {
     id: '3',
-    title: 'E-Commerce Trends 2024',
+    title: 'E-Commerce Trends 2026',
     excerpt:
-      'Was macht einen erfolgreichen Onlineshop aus? Die wichtigsten Trends und Technologien.',
-    date: '2024-01-20',
+      'Von AI-Personalisierung bis Headless Commerce – die Technologien, die erfolgreiche Shops ausmachen.',
+    date: '2025-12-01',
     readTime: '6 min',
     category: 'E-Commerce',
   },
@@ -162,42 +163,65 @@ export function BlogSection() {
         </div>
 
         {/* Newsletter signup teaser */}
-        <motion.div
-          className="glass mt-16 rounded-2xl p-8 text-center md:p-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <motion.div
-            className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10"
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
-            <span className="text-3xl">✉️</span>
-          </motion.div>
-          <h3 className="mb-2 text-2xl font-bold text-text-primary">
-            Keine Updates verpassen
-          </h3>
-          <p className="mb-6 text-text-secondary">
-            Erhalte die neuesten Artikel und Projekt-Updates direkt in dein Postfach.
-          </p>
-          <div className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              placeholder="deine@email.de"
-              className="flex-1 rounded-full border border-glass-border bg-glass-bg px-6 py-3 text-text-primary placeholder:text-text-muted focus:border-accent focus:outline-none"
-            />
-            <motion.button
-              className="btn-primary whitespace-nowrap"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Abonnieren
-            </motion.button>
-          </div>
-        </motion.div>
+        <NewsletterSignup />
       </div>
     </section>
+  )
+}
+
+function NewsletterSignup() {
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      // Open mailto with pre-filled subject
+      window.location.href = `mailto:info@dominikhein.de?subject=Newsletter%20Anmeldung&body=Bitte%20füge%20mich%20zum%20Newsletter%20hinzu:%20${encodeURIComponent(email)}`
+      setIsSubmitted(true)
+      setTimeout(() => setIsSubmitted(false), 3000)
+    }
+  }
+
+  return (
+    <motion.div
+      className="glass mt-16 rounded-2xl p-8 text-center md:p-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+    >
+      <motion.div
+        className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10"
+        animate={{ rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 4, repeat: Infinity }}
+      >
+        <span className="text-3xl">✉️</span>
+      </motion.div>
+      <h3 className="mb-2 text-2xl font-bold text-text-primary">
+        Keine Updates verpassen
+      </h3>
+      <p className="mb-6 text-text-secondary">
+        Erhalte die neuesten Artikel und Projekt-Updates direkt in dein Postfach.
+      </p>
+      <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="deine@email.de"
+          required
+          className="flex-1 rounded-full border border-glass-border bg-glass-bg px-6 py-3 text-text-primary placeholder:text-text-muted focus:border-accent focus:outline-none"
+        />
+        <motion.button
+          type="submit"
+          className="btn-primary whitespace-nowrap"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {isSubmitted ? '✓ Gesendet!' : 'Abonnieren'}
+        </motion.button>
+      </form>
+    </motion.div>
   )
 }
