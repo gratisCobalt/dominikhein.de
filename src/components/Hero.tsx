@@ -56,7 +56,7 @@ export function Hero() {
         >
           <span className="glass rounded-full px-4 py-2 text-sm text-text-secondary">
             <span className="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
-            Bundessieg Jugend forscht 2024
+            Bundessieg Jugend forscht 2022
           </span>
         </motion.div>
 
@@ -111,7 +111,7 @@ export function Hero() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="mt-16 flex justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
