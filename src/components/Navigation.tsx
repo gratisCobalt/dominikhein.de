@@ -31,13 +31,13 @@ export function Navigation() {
     >
       <div className="container flex items-center justify-between">
         <Link to="/">
-          <motion.span
-            className="text-xl font-bold text-text-primary cursor-pointer"
+          <motion.img
+            src="/logo.png"
+            alt="Dominik Hein"
+            className="h-8 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
-            <span className="text-gradient">Dominik</span>
-          </motion.span>
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
