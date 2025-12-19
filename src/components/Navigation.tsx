@@ -34,7 +34,9 @@ export function Navigation() {
           <motion.img
             src="/logo.webp"
             alt="Dominik Hein"
-            className="h-8 cursor-pointer"
+            width={168}
+            height={32}
+            className="h-8 w-auto cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           />
@@ -73,6 +75,7 @@ export function Navigation() {
         <motion.button
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           whileTap={{ scale: 0.9 }}
+          aria-label="Menü öffnen"
         >
           <span className="h-0.5 w-6 bg-text-primary" />
           <span className="h-0.5 w-6 bg-text-primary" />

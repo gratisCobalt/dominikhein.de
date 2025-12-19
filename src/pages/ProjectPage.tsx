@@ -211,6 +211,8 @@ export function ProjectPage() {
               <img
                 src={project.image}
                 alt={project.title}
+                width={project.isPhone ? 320 : 800}
+                height={project.isPhone ? 620 : 450}
                 className={`mx-auto ${project.isPhone ? 'h-96 object-contain' : 'w-full object-cover rounded-xl'}`}
               />
             </motion.div>
