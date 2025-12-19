@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import sculptScreenshot from '../assets/sculpt/Sculpt-App-Screenshot.webp'
+import jufoTitelbild from '../assets/jufo/Jugend_forscht_revolutionAIR_Titelbild_jpg.webp'
 
 interface Project {
   id: string
@@ -31,7 +32,7 @@ const projects: Project[] = [
     subtitle: 'Jugend forscht',
     description:
       'Innovatives Projekt zur Luftqualitätsüberwachung mit KI-gestützter Analyse. Bundessieger bei Jugend forscht.',
-    image: '', // Placeholder for later
+    image: jufoTitelbild,
     tags: ['Python', 'Flutter', 'C++', 'MQTT', 'Machine Learning', 'IoT'],
     award: 'Bundessieg 2022',
   },
