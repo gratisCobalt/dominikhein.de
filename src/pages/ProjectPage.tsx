@@ -5,6 +5,11 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import sculptScreenshot from '../assets/Sculpt-App-Screenshot.png'
 
+interface TechSection {
+  title: string
+  content: string
+}
+
 interface ProjectData {
   slug: string
   title: string
@@ -15,7 +20,7 @@ interface ProjectData {
   tags: string[]
   award?: string
   features?: string[]
-  techDetails?: string
+  techSections?: TechSection[]
   link?: string
   isPhone?: boolean
 }
@@ -51,18 +56,20 @@ von der Workout-Erfassung bis zur Analyse.
       'Cloud-Sync für alle deine Geräte',
       'Offline-Modus für Training ohne Internet',
     ],
-    techDetails: `
-Die Architektur von Sculpt basiert auf einem modernen Serverless-Stack. Das Frontend 
-ist eine React-Anwendung mit TypeScript, die auf Vercel gehostet wird. 
-
-Das Backend besteht aus Vercel Serverless Functions, die für maximale Performance 
-und Skalierbarkeit optimiert sind. Datenbank-Operationen werden asynchron verarbeitet, 
-um die User Experience nicht zu beeinträchtigen.
-
-Besonderer Fokus lag auf der Developer Experience: Mit TypeScript durchgehend 
-im Stack sind Fehler früh erkennbar, und das Deployment erfolgt automatisch bei 
-jedem Push.
-    `,
+    techSections: [
+      {
+        title: 'Frontend',
+        content: 'React-Anwendung mit TypeScript, gehostet auf Vercel. Optimiert für schnelle Ladezeiten und nahtlose User Experience.',
+      },
+      {
+        title: 'Backend',
+        content: 'Vercel Serverless Functions für maximale Performance und Skalierbarkeit. Datenbank-Operationen werden asynchron verarbeitet.',
+      },
+      {
+        title: 'Developer Experience',
+        content: 'TypeScript durchgehend im Stack für frühe Fehlererkennung. Automatisches Deployment bei jedem Push.',
+      },
+    ],
   },
   revolutionair: {
     slug: 'revolutionair',
@@ -95,23 +102,24 @@ eine Bestätigung für die wissenschaftliche Tiefe und praktische Anwendbarkeit 
       'Historische Datenanalyse und Trends',
       'Integration von Wetterdaten für präzisere Vorhersagen',
     ],
-    techDetails: `
-Das System besteht aus mehreren Komponenten:
-
-**Hardware:** Selbst entwickelte Sensormodule mit ESP32-Mikrocontrollern erfassen 
-CO₂, Feinstaub (PM2.5/PM10), Temperatur und Luftfeuchtigkeit in Echtzeit.
-
-**Kommunikation:** MQTT-Protokoll für zuverlässige Echtzeit-Datenübertragung von 
-den Sensoren zum Backend. Die Architektur ist für hunderte gleichzeitige Sensoren 
-ausgelegt.
-
-**Machine Learning:** Ein in Python entwickeltes ML-Modell analysiert historische 
-Daten und Wetterdaten, um Luftqualitätstrends vorherzusagen. Das Modell wurde 
-mit mehreren Monaten Echtzeitdaten trainiert.
-
-**App:** Die Flutter-App visualisiert aktuelle Werte und Vorhersagen, sendet 
-Push-Benachrichtigungen bei kritischen Werten und zeigt historische Trends.
-    `,
+    techSections: [
+      {
+        title: 'Hardware',
+        content: 'Selbst entwickelte Sensormodule mit ESP32-Mikrocontrollern erfassen CO₂, Feinstaub (PM2.5/PM10), Temperatur und Luftfeuchtigkeit in Echtzeit.',
+      },
+      {
+        title: 'Kommunikation',
+        content: 'MQTT-Protokoll für zuverlässige Echtzeit-Datenübertragung von den Sensoren zum Backend. Die Architektur ist für hunderte gleichzeitige Sensoren ausgelegt.',
+      },
+      {
+        title: 'Machine Learning',
+        content: 'Ein in Python entwickeltes ML-Modell analysiert historische Daten und Wetterdaten, um Luftqualitätstrends vorherzusagen. Mit mehreren Monaten Echtzeitdaten trainiert.',
+      },
+      {
+        title: 'App',
+        content: 'Flutter-App für iOS und Android visualisiert aktuelle Werte und Vorhersagen, sendet Push-Benachrichtigungen bei kritischen Werten.',
+      },
+    ],
   },
 }
 
@@ -245,14 +253,30 @@ export function ProjectPage() {
               </section>
             )}
 
-            {/* Tech Details */}
-            {project.techDetails && (
+            {/* Tech Sections */}
+            {project.techSections && (
               <section>
-                <h2 className="text-2xl font-bold text-accent mb-4">
+                <h2 className="text-2xl font-bold text-accent mb-6">
                   Technische Details
                 </h2>
-                <div className="text-text-secondary leading-relaxed whitespace-pre-line p-6 rounded-xl bg-glass-bg border border-glass-border">
-                  {project.techDetails}
+                <div className="grid gap-4">
+                  {project.techSections.map((section, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="p-5 rounded-xl bg-glass-bg border border-glass-border"
+                    >
+                      <h3 className="text-lg font-semibold text-text-primary mb-2">
+                        {section.title}
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed">
+                        {section.content}
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
               </section>
             )}
