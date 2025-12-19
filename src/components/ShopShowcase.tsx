@@ -64,7 +64,7 @@ function ShopCard({ shop, index }: { shop: Shop; index: number }) {
               alt={shop.name}
               width={400}
               height={300}
-              className="h-full w-full object-contain"
+              className="h-full w-full object-cover"
               animate={{ scale: isHovered ? 1.05 : 1 }}
               transition={{ duration: 0.4 }}
             />
