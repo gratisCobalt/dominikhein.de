@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import manubetonImg from '../assets/manubeton.webp'
+import bepureImg from '../assets/bepure.webp'
+import zahnheldImg from '../assets/zahnheld.webp'
 
 interface Shop {
   id: string
@@ -15,7 +18,7 @@ const shops: Shop[] = [
     id: 'manubeton',
     name: 'Manubeton',
     description: 'Deutsche Designmarke für handgefertigte Beton-Dekoration. Tischfeuer, Kerzenhalter und Schlüsselhalter – modernes Design für stilvolles Wohnen.',
-    image: '',
+    image: manubetonImg,
     url: 'https://manubeton.de',
     tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
@@ -23,7 +26,7 @@ const shops: Shop[] = [
     id: 'bepure',
     name: 'bepure',
     description: 'Schweizer Naturkosmetik mit Bio-Arganöl. Vegane Hautpflege für jeden Hauttyp – produziert in Winterthur mit fair gehandelten Zutaten aus Marokko.',
-    image: '',
+    image: bepureImg,
     url: 'https://bepure.ch',
     tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
@@ -31,7 +34,7 @@ const shops: Shop[] = [
     id: 'zahnheld',
     name: 'Zahnheld',
     description: 'Elektrische Schallzahnbürsten und Mundduschen. Über 250.000 zufriedene Kunden und innovative Zahnpflege-Produkte für die ganze Familie.',
-    image: '',
+    image: zahnheldImg,
     url: 'https://zahnheld.de',
     tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
