@@ -161,7 +161,7 @@ export function RevolutionairPage() {
                           className="w-full h-auto object-cover"
                         />
                       ) : (
-                        <div className="flex-1">
+                        <div className="aspect-[4/3] flex-1">
                           <img
                             src={image.src}
                             alt={image.alt}
