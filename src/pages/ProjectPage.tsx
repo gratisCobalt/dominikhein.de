@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
-import sculptScreenshot from '../assets/Sculpt-App-Screenshot.png'
+import sculptScreenshot from '../assets/Sculpt-App-Screenshot.webp'
 
 interface TechSection {
   title: string
