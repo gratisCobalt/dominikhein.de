@@ -46,7 +46,7 @@ export function Hero() {
       {/* Placeholder for background image - will be replaced */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-primary/50 to-bg-primary" />
 
-      <div className="container relative z-10 text-center">
+      <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
         {/* Animated badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
