@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const navItems = [
-  { name: 'Projekte', href: '#projects' },
-  { name: 'Shops', href: '#shops' },
-  { name: 'Blog', href: '#blog' },
-  { name: 'Kontakt', href: '#contact' },
+  { name: 'Projekte', href: '/#projects' },
+  { name: 'Shops', href: '/#shops' },
+  { name: 'Blog', href: '/#blog' },
+  { name: 'Kontakt', href: '/#contact' },
 ]
 
 export function Navigation() {
