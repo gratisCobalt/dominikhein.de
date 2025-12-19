@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
-import { revolutionairStory, revolutionairTechSpecs, revolutionairImages } from '../data/revolutionairData'
+import { revolutionairStory, revolutionairTechSpecs } from '../data/revolutionairData'
 
 export function RevolutionairPage() {
   return (
@@ -70,20 +70,6 @@ export function RevolutionairPage() {
               <span className="text-text-primary font-medium">Dominik Hein, Jaro Filip, Max Pfannkuch</span>
             </div>
           </motion.header>
-
-          {/* Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16 rounded-2xl overflow-hidden"
-          >
-            <img
-              src={revolutionairImages.titelbild}
-              alt="revolutionAIR Team"
-              className="w-full h-auto object-cover rounded-2xl"
-            />
-          </motion.div>
 
           {/* Tech Specs */}
           <motion.section
