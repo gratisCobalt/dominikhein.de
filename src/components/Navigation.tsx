@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const navItems = [
   { name: 'Projekte', href: '#projects' },
@@ -29,14 +30,15 @@ export function Navigation() {
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
     >
       <div className="container flex items-center justify-between">
-        <motion.a
-          href="#"
-          className="text-xl font-bold text-text-primary"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-gradient">Dominik</span>
-        </motion.a>
+        <Link to="/">
+          <motion.span
+            className="text-xl font-bold text-text-primary cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="text-gradient">Dominik</span>
+          </motion.span>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item, index) => (
