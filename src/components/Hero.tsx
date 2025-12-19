@@ -39,14 +39,15 @@ export function Hero() {
   }
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen overflow-hidden pt-20">
       {/* Hero background gradient */}
       <div className="bg-hero-gradient absolute inset-0" />
       
       {/* Placeholder for background image - will be replaced */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-primary/50 to-bg-primary" />
 
-      <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
+      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-6">
+        <div className="text-center w-full max-w-4xl mx-auto">
         {/* Animated badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -129,6 +130,7 @@ export function Hero() {
             />
           </motion.div>
         </motion.div>
+        </div>
       </div>
 
       {/* Decorative elements */}
