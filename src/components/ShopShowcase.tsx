@@ -12,25 +12,28 @@ interface Shop {
 
 const shops: Shop[] = [
   {
-    id: 'shop1',
-    name: 'Shop Projekt 1',
-    description: 'Moderner E-Commerce Shop mit schnellem Checkout und responsivem Design.',
+    id: 'manubeton',
+    name: 'Manubeton',
+    description: 'Deutsche Designmarke für handgefertigte Beton-Dekoration. Tischfeuer, Kerzenhalter und Schlüsselhalter – modernes Design für stilvolles Wohnen.',
     image: '',
-    tech: ['Shopify', 'Liquid', 'React', 'Tailwind'],
-  },
-  {
-    id: 'shop2',
-    name: 'Shop Projekt 2',
-    description: 'Custom-built Online-Shop mit integrierten Analytics und Inventory Management.',
-    image: '',
+    url: 'https://manubeton.de',
     tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
   {
-    id: 'shop3',
-    name: 'Shop Projekt 3',
-    description: 'High-Performance Webshop mit optimierter User Experience und SEO.',
+    id: 'bepure',
+    name: 'bepure',
+    description: 'Schweizer Naturkosmetik mit Bio-Arganöl. Vegane Hautpflege für jeden Hauttyp – produziert in Winterthur mit fair gehandelten Zutaten aus Marokko.',
     image: '',
-    tech: ['Shopify', 'Liquid', 'Tailwind'],
+    url: 'https://bepure.ch',
+    tech: ['Shopify', 'Liquid', 'JavaScript'],
+  },
+  {
+    id: 'zahnheld',
+    name: 'Zahnheld',
+    description: 'Elektrische Schallzahnbürsten und Mundduschen. Über 250.000 zufriedene Kunden und innovative Zahnpflege-Produkte für die ganze Familie.',
+    image: '',
+    url: 'https://zahnheld.de',
+    tech: ['Shopify', 'Liquid', 'JavaScript'],
   },
 ]
 
