@@ -128,9 +128,9 @@ export function RevolutionairPage() {
                   )}
                 </motion.figure>
               ) : (
-                <div className={`grid gap-4 items-start ${
+                <div className={`grid gap-4 ${
                   section.images.length === 2 && section.images.some(img => img.isPortrait)
-                    ? 'md:grid-cols-2' 
+                    ? 'md:grid-cols-[2fr_1fr]' 
                     : section.images.length === 2 
                       ? 'md:grid-cols-2' 
                       : section.images.length >= 3 
@@ -144,14 +144,14 @@ export function RevolutionairPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: imageIndex * 0.1 }}
-                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
+                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                     >
                       {image.isPortrait ? (
-                        <div className="flex items-center justify-center p-4">
+                        <div className="flex-1 flex items-center justify-center p-4">
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-auto h-auto max-h-[350px] object-contain"
+                            className="w-auto h-auto max-h-full object-contain"
                           />
                         </div>
                       ) : image.isFeatured ? (
@@ -161,11 +161,13 @@ export function RevolutionairPage() {
                           className="w-full h-auto object-cover"
                         />
                       ) : (
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-full object-cover"
-                        />
+                        <div className="flex-1">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       )}
                       {image.caption && (
                         <figcaption className="p-3 text-xs text-text-muted text-center">
