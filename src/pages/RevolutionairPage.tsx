@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Download } from 'lucide-react'
+import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { revolutionairStory, revolutionairTechSpecs, revolutionairImages } from '../data/revolutionairData'
@@ -153,12 +153,12 @@ export function RevolutionairPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: imageIndex * 0.1 }}
-                      className="rounded-xl overflow-hidden bg-glass-bg border border-glass-border"
+                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border ${image.isPortrait ? 'max-w-xs mx-auto' : ''}`}
                     >
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-48 md:h-56 object-cover"
+                        className={`w-full object-cover ${image.isPortrait ? 'aspect-[9/16]' : 'h-48 md:h-56'}`}
                       />
                       {image.caption && (
                         <figcaption className="p-3 text-xs text-text-muted text-center">
@@ -190,8 +190,8 @@ export function RevolutionairPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg-primary font-semibold rounded-full hover:bg-accent-glow transition-colors"
             >
-              <Download className="w-4 h-4" />
-              Schriftliche Arbeit herunterladen (PDF)
+              <ExternalLink className="w-4 h-4" />
+              Schriftliche Arbeit ansehen
             </a>
           </motion.section>
 
