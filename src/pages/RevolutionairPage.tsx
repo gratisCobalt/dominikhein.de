@@ -130,7 +130,7 @@ export function RevolutionairPage() {
               ) : (
                 <div className={`grid gap-4 items-start ${
                   section.images.length === 2 && section.images.some(img => img.isPortrait)
-                    ? 'grid-cols-[1fr_auto]' 
+                    ? 'md:grid-cols-2' 
                     : section.images.length === 2 
                       ? 'md:grid-cols-2' 
                       : section.images.length >= 3 
@@ -147,11 +147,13 @@ export function RevolutionairPage() {
                       className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                     >
                       {image.isPortrait ? (
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-auto max-w-full mx-auto"
-                        />
+                        <div className="flex items-center justify-center p-4">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-auto h-auto max-h-[350px] object-contain"
+                          />
+                        </div>
                       ) : image.isFeatured ? (
                         <img
                           src={image.src}
