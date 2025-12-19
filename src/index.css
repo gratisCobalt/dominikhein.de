@@ -157,7 +157,7 @@ body {
 
 .btn-primary {
   background: var(--gradient-accent);
-  color: var(--color-bg-primary);
+  color: #0a0a0f !important;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: var(--radius-full);
@@ -168,6 +168,7 @@ body {
 }
 
 .btn-primary:hover {
+  color: #0a0a0f !important;
   transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-glow-md);
 }
