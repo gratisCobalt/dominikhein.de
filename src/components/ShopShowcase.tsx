@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import manubetonImg from '../assets/manubeton.webp'
-import bepureImg from '../assets/bepure.webp'
-import zahnheldImg from '../assets/zahnheld.webp'
+import manubetonImg from '../assets/onlineshops/manubeton.webp'
+import bepureImg from '../assets/onlineshops/bepure.webp'
+import zahnheldImg from '../assets/onlineshops/zahnheld.webp'
 
 interface Shop {
   id: string
