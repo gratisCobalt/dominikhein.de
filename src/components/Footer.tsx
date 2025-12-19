@@ -70,7 +70,7 @@ export function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-glass-border bg-glass-bg text-text-secondary transition-colors hover:border-accent hover:text-accent"
+                  className="liquid-glass-btn flex h-10 w-10 items-center justify-center rounded-full text-text-secondary"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

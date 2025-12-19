@@ -47,8 +47,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.2 }}
     >
       <motion.div
-        className="glass glass-hover relative overflow-hidden rounded-2xl p-6 md:p-8"
-        whileHover={{ scale: 1.02, y: -8 }}
+        className="liquid-glass liquid-glass-refraction relative overflow-hidden rounded-2xl p-6 md:p-8 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2"
+        whileHover={{ boxShadow: '0 0 60px rgba(127, 255, 212, 0.2)' }}
         transition={{ duration: 0.3 }}
       >
         {/* Award badge */}

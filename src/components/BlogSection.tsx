@@ -51,8 +51,8 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
     >
       <motion.a
         href={`/blog/${post.id}`}
-        className="glass glass-hover block rounded-2xl p-6"
-        whileHover={{ y: -5 }}
+        className="liquid-glass liquid-glass-refraction block rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1"
+        whileHover={{ boxShadow: '0 0 40px rgba(127, 255, 212, 0.15)' }}
         transition={{ duration: 0.2 }}
       >
         {/* Category & Meta */}

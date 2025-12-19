@@ -54,7 +54,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-8 inline-flex"
         >
-          <span className="glass rounded-full px-4 py-2 text-sm text-text-secondary">
+          <span className="liquid-glass-btn rounded-full px-4 py-2 text-sm text-text-secondary">
             <span className="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
             Bundessieg Jugend forscht 2022
           </span>
@@ -93,15 +93,15 @@ export function Hero() {
         >
           <motion.a
             href="#projects"
-            className="btn-primary hover:shadow-glow-md"
-            whileHover={{ scale: 1.05 }}
+            className="btn-primary"
+            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(127, 255, 212, 0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
             Meine Projekte
           </motion.a>
           <motion.a
             href="#contact"
-            className="btn-ghost"
+            className="liquid-glass-btn rounded-full px-8 py-3 font-medium text-text-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -132,7 +132,7 @@ export function Hero() {
 
       {/* Decorative elements */}
       <motion.div
-        className="absolute bottom-20 left-10 h-20 w-20 rounded-2xl border border-glass-border bg-glass-bg backdrop-blur-xl"
+        className="liquid-glass absolute bottom-20 left-10 h-20 w-20 rounded-2xl"
         animate={{ rotate: [0, 10, 0], y: [0, -10, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
