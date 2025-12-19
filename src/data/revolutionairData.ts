@@ -23,6 +23,7 @@ export interface GalleryImage {
   alt: string
   caption: string
   isPortrait?: boolean
+  isFeatured?: boolean
 }
 
 export interface StorySection {
@@ -68,7 +69,7 @@ Die Idee: UVC-Licht zur Desinfektion von Raumluft. Aber nicht mit den klobigen, 
 
 Die eigentliche Innovation war aber die intelligente Steuerung: Ein Machine-Learning-Modell erkennt Muster im Raumnutzungsverhalten und passt die Desinfektionsleistung automatisch an. Bei einer Konferenz läuft das Gerät auf Hochtouren, nachts im leeren Büro nur minimal – das spart Energie und erhöht die LED-Lebensdauer.`,
     images: [
-      { src: nahaufnahme, alt: 'Nahaufnahme des Luftdesinfektionsgeräts', caption: 'Das Herzstück: 14 UVC-LEDs auf einem Aluminium-Kühlkörper' },
+      { src: nahaufnahme, alt: 'Nahaufnahme des Luftdesinfektionsgeräts', caption: 'Das Herzstück: 14 UVC-LEDs auf einem Aluminium-Kühlkörper', isFeatured: true },
       { src: appScreenshot, alt: 'revolutionAIR App Screenshot', caption: 'Die Smartphone-App zur Steuerung und Überwachung', isPortrait: true },
     ],
   },
@@ -86,7 +87,7 @@ Die Ergebnisse übertrafen unsere Erwartungen: Bei 120 Sekunden Expositionszeit 
     title: 'Der Bundeswettbewerb',
     content: `Mai 2022: Der Bundeswettbewerb von Jugend forscht in Lübeck. Fünf Tage intensive Präsentationen, Jury-Gespräche und der Austausch mit anderen jungen Forschern aus ganz Deutschland. Die Anspannung war greifbar, aber auch die Begeisterung für die vielen innovativen Projekte um uns herum.
 
-Dann der große Moment: Bundessieg im Bereich Arbeitswelt. Wir konnten es kaum fassen. All die Arbeit, die durchwachten Nächte, die gescheiterten Experimente – sie hatten sich ausgezahlt.`,
+Dann der große Moment: Bundessieg für die beste interdisziplinäre Arbeit – eine fachbereichsübergreifende Auszeichnung, die eine noch höhere Ehre darstellt. Wir konnten es kaum fassen. All die Arbeit, die durchwachten Nächte, die gescheiterten Experimente – sie hatten sich ausgezahlt.`,
     images: [
       { src: afterparty, alt: 'Bundeswettbewerb Afterparty', caption: 'Feier nach der Preisverleihung – ein unvergesslicher Abend' },
     ],

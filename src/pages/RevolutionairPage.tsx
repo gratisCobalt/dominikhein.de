@@ -36,10 +36,7 @@ export function RevolutionairPage() {
           >
             <div className="mb-4 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-accent/20 text-accent rounded-full">
-                🏆 Bundessieg Jugend forscht 2022
-              </span>
-              <span className="inline-flex items-center px-4 py-2 text-sm font-medium bg-glass-bg border border-glass-border text-text-secondary rounded-full">
-                Arbeitswelt
+                🏆 Bundessieg für die beste interdisziplinäre Arbeit 2022
               </span>
             </div>
 
@@ -139,13 +136,19 @@ export function RevolutionairPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: imageIndex * 0.1 }}
-                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''}`}
+                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''} ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                     >
                       {image.isPortrait ? (
                         <img
                           src={image.src}
                           alt={image.alt}
                           className="w-full h-auto object-contain"
+                        />
+                      ) : image.isFeatured ? (
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-auto object-cover"
                         />
                       ) : (
                         <div className="aspect-[4/3] overflow-hidden">
