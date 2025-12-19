@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import sculptScreenshot from '../assets/Sculpt-App-Screenshot.png'
+import sculptScreenshot from '../assets/Sculpt-App-Screenshot.webp'
 
 interface Project {
   id: string

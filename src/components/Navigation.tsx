@@ -32,7 +32,7 @@ export function Navigation() {
       <div className="container flex items-center justify-between">
         <Link to="/">
           <motion.img
-            src="/logo.png"
+            src="/logo.webp"
             alt="Dominik Hein"
             className="h-8 cursor-pointer"
             whileHover={{ scale: 1.05 }}
