@@ -69,7 +69,7 @@ Die Idee: UVC-Licht zur Desinfektion von Raumluft. Aber nicht mit den klobigen, 
 
 Die eigentliche Innovation war aber die intelligente Steuerung: Ein Machine-Learning-Modell erkennt Muster im Raumnutzungsverhalten und passt die Desinfektionsleistung automatisch an. Bei einer Konferenz läuft das Gerät auf Hochtouren, nachts im leeren Büro nur minimal – das spart Energie und erhöht die LED-Lebensdauer.`,
     images: [
-      { src: nahaufnahme, alt: 'Nahaufnahme des Luftdesinfektionsgeräts', caption: 'Das Herzstück: 14 UVC-LEDs auf einem Aluminium-Kühlkörper', isFeatured: true },
+      { src: nahaufnahme, alt: 'Nahaufnahme des Luftdesinfektionsgeräts', caption: 'Das Herzstück: 14 UVC-LEDs auf einem Aluminium-Kühlkörper' },
       { src: appScreenshot, alt: 'revolutionAIR App Screenshot', caption: 'Die Smartphone-App zur Steuerung und Überwachung', isPortrait: true },
     ],
   },
