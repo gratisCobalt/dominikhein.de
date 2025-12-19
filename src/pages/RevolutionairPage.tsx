@@ -39,7 +39,7 @@ export function RevolutionairPage() {
                 🏆 Bundessieg Jugend forscht 2022
               </span>
               <span className="inline-flex items-center px-4 py-2 text-sm font-medium bg-glass-bg border border-glass-border text-text-secondary rounded-full">
-                Technik
+                Arbeitswelt
               </span>
             </div>
 

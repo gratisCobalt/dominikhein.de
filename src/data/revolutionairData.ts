@@ -86,7 +86,7 @@ Die Ergebnisse übertrafen unsere Erwartungen: Bei 120 Sekunden Expositionszeit 
     title: 'Der Bundeswettbewerb',
     content: `Mai 2022: Der Bundeswettbewerb von Jugend forscht in Lübeck. Fünf Tage intensive Präsentationen, Jury-Gespräche und der Austausch mit anderen jungen Forschern aus ganz Deutschland. Die Anspannung war greifbar, aber auch die Begeisterung für die vielen innovativen Projekte um uns herum.
 
-Dann der große Moment: Bundessieg im Bereich Technik. Wir konnten es kaum fassen. All die Arbeit, die durchwachten Nächte, die gescheiterten Experimente – sie hatten sich ausgezahlt.`,
+Dann der große Moment: Bundessieg im Bereich Arbeitswelt. Wir konnten es kaum fassen. All die Arbeit, die durchwachten Nächte, die gescheiterten Experimente – sie hatten sich ausgezahlt.`,
     images: [
       { src: afterparty, alt: 'Bundeswettbewerb Afterparty', caption: 'Feier nach der Preisverleihung – ein unvergesslicher Abend' },
     ],
