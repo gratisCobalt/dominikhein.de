@@ -188,7 +188,7 @@ export function RevolutionairPage() {
               href="/revolutionair-schriftliche-arbeit.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg-primary font-semibold rounded-full hover:bg-accent-glow transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-black font-semibold rounded-full hover:bg-accent-glow transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
               Schriftliche Arbeit ansehen
