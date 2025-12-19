@@ -128,7 +128,15 @@ export function RevolutionairPage() {
                   )}
                 </motion.figure>
               ) : (
-                <div className={`grid gap-4 ${section.images.length === 2 ? 'md:grid-cols-2' : section.images.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : ''}`}>
+                <div className={`grid gap-4 ${
+                  section.images.length === 2 && section.images.some(img => img.isPortrait)
+                    ? 'grid-cols-[1fr_auto]' 
+                    : section.images.length === 2 
+                      ? 'md:grid-cols-2' 
+                      : section.images.length >= 3 
+                        ? 'md:grid-cols-2 lg:grid-cols-3' 
+                        : ''
+                }`}>
                   {section.images.map((image, imageIndex) => (
                     <motion.figure
                       key={imageIndex}
@@ -136,13 +144,13 @@ export function RevolutionairPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: imageIndex * 0.1 }}
-                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''} ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
+                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isFeatured ? 'md:col-span-2 lg:col-span-3' : ''}`}
                     >
                       {image.isPortrait ? (
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-auto object-contain"
+                          className="w-auto h-full max-h-[400px] object-contain mx-auto"
                         />
                       ) : image.isFeatured ? (
                         <img
@@ -151,13 +159,11 @@ export function RevolutionairPage() {
                           className="w-full h-auto object-cover"
                         />
                       ) : (
-                        <div className="aspect-[4/3] overflow-hidden">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                        />
                       )}
                       {image.caption && (
                         <figcaption className="p-3 text-xs text-text-muted text-center">
