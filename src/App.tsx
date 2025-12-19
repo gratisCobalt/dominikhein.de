@@ -10,6 +10,7 @@ const BlogPostPage = lazy(() => import('./pages/BlogPostPage'))
 const ImpressumPage = lazy(() => import('./pages/ImpressumPage').then(m => ({ default: m.ImpressumPage })))
 const DatenschutzPage = lazy(() => import('./pages/DatenschutzPage').then(m => ({ default: m.DatenschutzPage })))
 const ProjectPage = lazy(() => import('./pages/ProjectPage').then(m => ({ default: m.ProjectPage })))
+const RevolutionairPage = lazy(() => import('./pages/RevolutionairPage').then(m => ({ default: m.RevolutionairPage })))
 
 // Loading fallback
 function PageLoader() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/impressum" element={<ImpressumPage />} />
           <Route path="/datenschutz" element={<DatenschutzPage />} />
+          <Route path="/projekt/revolutionair" element={<RevolutionairPage />} />
           <Route path="/projekt/:slug" element={<ProjectPage />} />
         </Routes>
       </Suspense>
