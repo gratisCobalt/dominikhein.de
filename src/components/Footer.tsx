@@ -58,7 +58,7 @@ export function Footer() {
               <span className="text-gradient">Dominik</span>
             </a>
             <p className="mb-6 max-w-sm text-text-secondary">
-              Full-Stack Developer mit Leidenschaft für innovative Lösungen. 
+              Software Developer mit Leidenschaft für innovative Lösungen. 
               Von preisgekrönten Forschungsprojekten bis hin zu skalierbaren Web-Anwendungen.
             </p>
 
