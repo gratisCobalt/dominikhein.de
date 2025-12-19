@@ -129,14 +129,12 @@ export function Footer() {
             </ul>
 
             {/* Availability badge */}
-            <motion.div
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2"
-              animate={{ boxShadow: ['0 0 0 rgba(127,255,212,0)', '0 0 20px rgba(127,255,212,0.3)', '0 0 0 rgba(127,255,212,0)'] }}
-              transition={{ duration: 2, repeat: Infinity }}
+            <div
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 shadow-glow-pulse"
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
               <span className="text-sm text-accent">Verfügbar für Projekte</span>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
