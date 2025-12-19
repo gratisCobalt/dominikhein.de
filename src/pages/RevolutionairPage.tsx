@@ -141,13 +141,21 @@ export function RevolutionairPage() {
                       transition={{ delay: imageIndex * 0.1 }}
                       className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''}`}
                     >
-                      <div className="aspect-[4/3] overflow-hidden">
+                      {image.isPortrait ? (
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
-                      </div>
+                      ) : (
+                        <div className="aspect-[4/3] overflow-hidden">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
                       {image.caption && (
                         <figcaption className="p-3 text-xs text-text-muted text-center">
                           {image.caption}
