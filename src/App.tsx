@@ -5,6 +5,7 @@ import { BlogPage } from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
 import { ImpressumPage } from './pages/ImpressumPage'
 import { DatenschutzPage } from './pages/DatenschutzPage'
+import { ProjectPage } from './pages/ProjectPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/impressum" element={<ImpressumPage />} />
         <Route path="/datenschutz" element={<DatenschutzPage />} />
+        <Route path="/projekt/:slug" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>
   )

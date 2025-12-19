@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import sculptScreenshot from '../assets/Sculpt-App-Screenshot.png'
 
 interface Project {
@@ -123,13 +124,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <motion.div
             className="absolute inset-0 flex items-center justify-center bg-bg-primary/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
           >
-            <motion.button
-              className="btn-primary"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Details ansehen
-            </motion.button>
+            <Link to={`/projekt/${project.id}`}>
+              <motion.span
+                className="btn-primary"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Details ansehen
+              </motion.span>
+            </Link>
           </motion.div>
         </div>
 
