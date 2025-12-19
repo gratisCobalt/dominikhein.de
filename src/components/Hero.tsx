@@ -77,7 +77,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          Full-Stack Developer & Innovator.{' '}
+          Software Developer & Innovator.{' '}
           <span className="text-gradient font-semibold">
             Building digital experiences
           </span>{' '}
