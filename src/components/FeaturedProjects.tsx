@@ -70,6 +70,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <motion.img
               src={project.image}
               alt={project.title}
+              width={project.isPhone ? 165 : 640}
+              height={project.isPhone ? 320 : 360}
               className={project.isPhone 
                 ? "h-64 w-auto object-contain drop-shadow-2xl" 
                 : "h-full w-full object-cover"}

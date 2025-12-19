@@ -65,6 +65,8 @@ function ShopCard({ shop, index }: { shop: Shop; index: number }) {
             <motion.img
               src={shop.image}
               alt={shop.name}
+              width={400}
+              height={300}
               className="h-full w-full object-cover"
               animate={{ scale: isHovered ? 1.1 : 1 }}
               transition={{ duration: 0.4 }}
