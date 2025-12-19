@@ -95,6 +95,10 @@ export function DatenschutzPage() {
               <p>
                 Dominik Hein
                 <br />
+                Am Bobenhäuser 9
+                <br />
+                63773 Goldbach
+                <br />
                 E-Mail:{' '}
                 <a href="mailto:info@dominikhein.de" className="text-accent hover:underline">
                   info@dominikhein.de

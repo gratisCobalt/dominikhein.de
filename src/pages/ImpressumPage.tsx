@@ -25,9 +25,9 @@ export function ImpressumPage() {
               <p>
                 Dominik Hein
                 <br />
-                [Straße und Hausnummer]
+                Am Bobenhäuser 9
                 <br />
-                [PLZ Ort]
+                63773 Goldbach
                 <br />
                 Deutschland
               </p>
@@ -48,9 +48,9 @@ export function ImpressumPage() {
               <p>
                 Dominik Hein
                 <br />
-                [Straße und Hausnummer]
+                Am Bobenhäuser 9
                 <br />
-                [PLZ Ort]
+                63773 Goldbach
               </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-accent">
