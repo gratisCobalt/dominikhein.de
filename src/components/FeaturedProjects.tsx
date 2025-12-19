@@ -164,11 +164,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         {/* Glow effect on hover */}
-        <motion.div
-          className="absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        <div
+          className="absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none"
           style={{
-            background: 'linear-gradient(135deg, rgba(127, 255, 212, 0.1) 0%, transparent 50%)',
-            pointerEvents: 'none',
+            background: 'linear-gradient(135deg, rgba(127, 255, 212, 0.1) 0%, rgba(127, 255, 212, 0) 50%)',
           }}
         />
       </motion.div>
