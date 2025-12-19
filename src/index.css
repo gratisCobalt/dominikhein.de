@@ -47,7 +47,7 @@
   
   /* Spacing */
   --space-section: 8rem;
-  --space-container: 1.5rem;
+  --space-container: 1rem;
   
   /* Animations */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);

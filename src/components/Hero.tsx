@@ -66,7 +66,8 @@ export function Hero() {
           className="mb-6 text-5xl font-bold leading-tight text-text-primary md:text-7xl lg:text-8xl"
           style={{ perspective: '1000px' }}
         >
-          {splitText('Dominik Hein')}
+          <span className="inline-block">{splitText('Dominik')}</span>{' '}
+          <span className="inline-block">{splitText('Hein')}</span>
         </h1>
 
         {/* Subtitle */}
