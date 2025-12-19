@@ -102,7 +102,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         )}
 
         {/* Image container */}
-        <div className={`relative mb-6 overflow-hidden rounded-xl bg-bg-tertiary ${project.isPhone ? 'flex justify-center py-8' : 'aspect-video'}`}>
+        <Link to={`/projekt/${project.id}`} className={`relative mb-6 block overflow-hidden rounded-xl bg-bg-tertiary cursor-pointer ${project.isPhone ? 'flex justify-center py-8' : 'aspect-video'}`}>
           {project.image ? (
             <motion.img
               src={project.image}
@@ -121,23 +121,17 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           )}
           
           {/* Hover overlay */}
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center bg-bg-primary/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+          <div
+            className="absolute inset-0 flex items-center justify-center bg-bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           >
-            <Link to={`/projekt/${project.id}`}>
-              <motion.span
-                className="btn-primary"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Details ansehen
-              </motion.span>
-            </Link>
-          </motion.div>
-        </div>
+            <span className="px-6 py-3 bg-accent text-bg-primary font-semibold rounded-full">
+              Details ansehen
+            </span>
+          </div>
+        </Link>
 
         {/* Content */}
-        <div style={{ transform: 'translateZ(50px)' }}>
+        <div>
           <p className="mb-1 text-sm text-accent">{project.subtitle}</p>
           <h3 className="mb-3 text-2xl font-bold text-text-primary">
             {project.title}
@@ -145,7 +139,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <p className="mb-4 text-text-secondary">{project.description}</p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map((tag) => (
               <motion.span
                 key={tag}
@@ -156,6 +150,17 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               </motion.span>
             ))}
           </div>
+
+          {/* CTA Button */}
+          <Link to={`/projekt/${project.id}`}>
+            <motion.span
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-glow transition-colors"
+              whileHover={{ x: 5 }}
+            >
+              Projekt ansehen
+              <span>→</span>
+            </motion.span>
+          </Link>
         </div>
 
         {/* Glow effect on hover */}
