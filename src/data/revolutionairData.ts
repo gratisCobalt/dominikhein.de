@@ -101,7 +101,7 @@ Robert Habeck, der Bundeswirtschaftsminister, nahm sich Zeit für ein ausführli
       { src: habeck2, alt: 'Präsentation bei Robert Habeck', caption: 'Präsentation von revolutionAIR' },
       { src: lindnerGespraech, alt: 'Gespräch mit Christian Lindner', caption: 'Diskussion mit Bundesfinanzminister Christian Lindner' },
       { src: lindner1, alt: 'Mit Christian Lindner', caption: 'Mit Christian Lindner im Bundestag' },
-      { src: lindner2, alt: 'Team mit Christian Lindner', caption: '' },
+      { src: lindner2, alt: 'Team mit Christian Lindner', caption: 'Team-Foto mit dem Bundesfinanzminister' },
       { src: amthor, alt: 'Mit Philipp Amthor', caption: 'Mit MdB Philipp Amthor' },
       { src: nadineSchoen, alt: 'Mit Nadine Schön', caption: 'Mit MdB Nadine Schön' },
       { src: peterHeidt, alt: 'Gespräch mit Peter Heidt', caption: 'Im Gespräch mit MdB Peter Heidt' },
