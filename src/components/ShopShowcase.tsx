@@ -57,15 +57,15 @@ function ShopCard({ shop, index }: { shop: Shop; index: number }) {
         className={`glass relative overflow-hidden rounded-2xl transition-shadow duration-300 ${isHovered ? 'shadow-glow-md' : 'shadow-card'}`}
       >
         {/* Image area */}
-        <div className="relative aspect-[4/3] overflow-hidden bg-bg-tertiary">
+        <div className="relative aspect-[4/3] overflow-hidden bg-bg-tertiary px-5 pb-5">
           {shop.image ? (
             <motion.img
               src={shop.image}
               alt={shop.name}
               width={400}
               height={300}
-              className="h-full w-full object-cover"
-              animate={{ scale: isHovered ? 1.1 : 1 }}
+              className="h-full w-full object-contain"
+              animate={{ scale: isHovered ? 1.05 : 1 }}
               transition={{ duration: 0.4 }}
             />
           ) : (
