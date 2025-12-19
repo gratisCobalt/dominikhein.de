@@ -131,7 +131,7 @@ export function RevolutionairPage() {
                   )}
                 </motion.figure>
               ) : (
-                <div className={`grid gap-4 ${section.images.length === 2 ? 'md:grid-cols-2 items-start' : section.images.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : ''}`}>
+                <div className={`grid gap-4 ${section.images.length === 2 ? 'md:grid-cols-2' : section.images.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : ''}`}>
                   {section.images.map((image, imageIndex) => (
                     <motion.figure
                       key={imageIndex}
@@ -139,13 +139,15 @@ export function RevolutionairPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: imageIndex * 0.1 }}
-                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''}`}
+                      className={`rounded-xl overflow-hidden bg-glass-bg border border-glass-border flex flex-col ${image.isPortrait ? 'max-w-[200px] mx-auto' : ''}`}
                     >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-auto object-contain"
-                      />
+                      <div className="aspect-[4/3] overflow-hidden">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       {image.caption && (
                         <figcaption className="p-3 text-xs text-text-muted text-center">
                           {image.caption}
