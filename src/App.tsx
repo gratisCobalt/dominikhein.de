@@ -6,10 +6,12 @@ import BlogPostPage from './pages/BlogPostPage'
 import { ImpressumPage } from './pages/ImpressumPage'
 import { DatenschutzPage } from './pages/DatenschutzPage'
 import { ProjectPage } from './pages/ProjectPage'
+import { ScrollToTop } from './components/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage />} />
