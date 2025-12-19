@@ -51,13 +51,7 @@ function ShopCard({ shop, index }: { shop: Shop; index: number }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="glass relative overflow-hidden rounded-2xl"
-        animate={{
-          boxShadow: isHovered
-            ? '0 0 40px rgba(127, 255, 212, 0.2), 0 20px 60px rgba(0,0,0,0.4)'
-            : '0 8px 32px rgba(0,0,0,0.4)',
-        }}
-        transition={{ duration: 0.3 }}
+        className={`glass relative overflow-hidden rounded-2xl transition-shadow duration-300 ${isHovered ? 'shadow-glow-md' : 'shadow-card'}`}
       >
         {/* Image area */}
         <div className="relative aspect-[4/3] overflow-hidden bg-bg-tertiary">

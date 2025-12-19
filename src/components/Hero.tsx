@@ -93,8 +93,8 @@ export function Hero() {
         >
           <motion.a
             href="#projects"
-            className="btn-primary"
-            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(127, 255, 212, 0.4)' }}
+            className="btn-primary hover:shadow-glow-md"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Meine Projekte
