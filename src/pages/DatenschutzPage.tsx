@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
-import { Navigation } from '../components/Navigation'
-import { Footer } from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 export function DatenschutzPage() {
   return (
-    <div className="min-h-screen bg-bg-primary">
-      <Navigation />
+    <div className="min-h-screen" style={{ background: 'var(--color-bg-primary)', color: 'var(--color-text-primary)' }}>
+      <nav className="px-6 py-4" style={{ borderBottom: '1px solid rgba(240,236,228,0.06)' }}>
+        <Link to="/" className="text-sm tracking-[0.15em] uppercase" style={{ fontFamily: 'var(--font-mono)', color: 'var(--color-text-secondary)' }}>
+          &larr; Zurück
+        </Link>
+      </nav>
 
       <main className="pt-32 pb-24">
         <article className="max-w-3xl mx-auto px-6">
@@ -209,7 +212,6 @@ export function DatenschutzPage() {
         </article>
       </main>
 
-      <Footer />
     </div>
   )
 }
