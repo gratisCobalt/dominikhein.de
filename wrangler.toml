@@ -1,6 +1,7 @@
 name = "dominikhein"
 compatibility_date = "2025-04-01"
 
+# Temporary under-construction page. Switch back to "./dist" to restore the portfolio.
 [assets]
-directory = "./dist"
+directory = "./maintenance"
 not_found_handling = "single-page-application"
